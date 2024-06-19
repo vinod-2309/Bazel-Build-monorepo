@@ -5,6 +5,7 @@ import "testing"
 func TestHelloWorld(t *testing.T) {
 	tests := []struct {
 		name string
+		input string
 		want string
 	}{
 		{
@@ -14,7 +15,7 @@ func TestHelloWorld(t *testing.T) {
 		},
 		{
 			name: "Test with special characters",
-			input:"Vinod"
+			input:"Vinod",
 			want: "Hello, World!",
 		},
 	}

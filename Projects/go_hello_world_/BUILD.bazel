@@ -4,14 +4,14 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 # gazelle:build_file_name BUILD,BUILD.bazel
 
 go_library(
-    name = "go_hello_world",
+    name = "go_hello_world_",
     srcs = ["hello_world.go"],
-    importpath = "https://github.com/vinod-2309/Bazel-Build-monorepo/tree/main/Projects/go_hello_world_",
+    importpath = "github.com/vinod-2309/Bazel-Build-monorepo/Projects/go_hello_world_",
     visibility = ["//visibility:public"],
 )
 
 go_test(
     name = "go_hello_world_test",
     srcs = ["hello_world_test.go"],
-    embed = [":go_hello_world"],
+    embed = [":go_hello_world_"],
 )
